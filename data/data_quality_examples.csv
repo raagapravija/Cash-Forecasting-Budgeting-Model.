@@ -1,0 +1,7 @@
+Example ID,Date Before,Month Before,Department Before,Category,Subcategory,Type,Amount Before,Clean Amount (INR m),Cleaning Note
+TXN-EX01,15/01/25,Jan 2025,Marketing ,Marketing,Marketing,Outflow,"INR 3,500,000",3.5,Duplicate candidate: same ID/date/amount appears twice
+TXN-EX02,2025/02/20,Feb-2025,Human Resources,Operating Activities,Salaries,Outflow,8000000,8.0,Department name must map to HR
+TXN-EX03,31-03-2025,Mar-2025,Operations,Operating Activities,Vendor Payments,Outflow,(2.20),-2.2,Outflow sign should be stored as positive magnitude in Cash Outflow
+TXN-EX04,2025-04-15,Apr-2025,,Operating Activities,,Outflow,"1,200,000",1.2,Missing department/category requires review
+TXN-EX05,2025-05-10,May-2025,Sales,Operating Activities,Customer Collections,Inflow,"₹15,200,000",15.2,Currency text must be converted to numeric
+TXN-EX06,2025-06-12,Jun-2025,IT,Operating Activities,Software,Outflow,999999999,999.999999,Unusual transaction: test against threshold and source invoice

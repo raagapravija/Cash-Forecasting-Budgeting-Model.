@@ -1,0 +1,26 @@
+Field,Definition,Validation Rule
+Transaction ID,Unique transaction key,Unique and non-blank
+Date,Transaction date,Valid date between 01-Jan-2025 and 31-Dec-2025
+Month,Month key used for aggregation,Must match mmm-yyyy
+Quarter,Fiscal quarter,Must be Q1 to Q4
+Department,Responsible cost center owner,Use approved mapping list
+Category,"Operating, investing or financing activity",Use approved list
+Subcategory,Detailed cash flow line,Use approved list
+Transaction Type,Inflow or Outflow,Direction must match cash column
+Cash Inflow,Positive cash received,>=0; populated only for inflows
+Cash Outflow,Positive cash paid,>=0; populated only for outflows
+Budget Amount,Approved plan for the transaction,>=0 unless reversal policy applies
+Actual Amount,Recorded cash amount,Equals Cash Inflow + Cash Outflow
+Forecast Amount,Forward-looking run-rate estimate,>=0
+Revenue,Recognized revenue reference,Populated for revenue transactions
+Operating Expense,Operating cash cost,Populated for operating outflows
+Capital Expenditure,Investing cash cost,Populated for investing outflows
+Accounts Receivable,Month-end receivable snapshot,Non-negative; reconcile to AR aging
+Accounts Payable,Month-end payable snapshot,Non-negative; reconcile to AP aging
+Opening Cash Balance,Month opening cash,Reconciles to prior closing cash
+Closing Cash Balance,Month closing cash,Opening cash + inflows - outflows
+Variance Amount,Actual minus budget,Reconcile to Actual Amount - Budget Amount
+Variance %,Actual minus budget divided by budget,Blank/0 if budget is zero
+Payment Status,"Collected, Received, Paid or N/A",Controlled list
+Cost Center,Owner code,Must map to department
+Remarks,Business explanation or source note,Required for material exceptions
